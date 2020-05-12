@@ -1,0 +1,14 @@
+- parsing introduction
+
+- variables
+    - const
+
+- conditionals
+
+- loops
+
+- functions
+
+- classes
+
+- 
