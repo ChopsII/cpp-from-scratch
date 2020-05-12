@@ -4,6 +4,8 @@ It has become a tradition of sorts to begin any course teaching a programming la
 
 This is what such a program looks like in C++:
 
+## Example 1.1
+
 ```cpp
 #include <iostream>
 
@@ -17,7 +19,9 @@ Try it for yourself! Go to <http://cpp.sh> (or any online C++ IDE of choice) and
 
 Feel free to play around with it a little.
 
-Some things you might like to explore
+Some things you might like to explore:
+
+### Ex 1.1 Questions
 
 * What happens if you leave off the `\n`?
 * What about the `;`?
@@ -79,3 +83,7 @@ Unfortunately, there are other things that might otherwise use this pattern, nam
 #### built-in types
 
 `int` is a *built-in type*, which means it is part of the *language*. You don't need to include anything to be able to use it, and it is available on all *conforming* build systems. The names of built-in types are also keywords, which means you're not allowed to name anything such that it conflicts with a keyword.
+
+expressions
+
+statements

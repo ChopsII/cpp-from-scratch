@@ -27,7 +27,9 @@ Objectes without names are usually examples of what are called *r-values*. These
 
 l-value and r-value are what are called *value categories*.
 
-A very rudimentary explanation of what an l-value and r-value is, is that an l-value can appear on the left-hand-side of an assignment expression, and an r-value usually only appears on the right-hand-side of an assignment expression. However, there are so many exceptions to this simple rule now that these are no longer used as the definition - and indeed the terms are further categorised into *pr-value*, *gl-value*, and *xvalue* - but I still find the left-hand-side and right-hand-side rule of thumb as a useful starting point to remember which one is which.
+A very rudimentary explanation of what an l-value and r-value is, is that only an l-value can appear on the left-hand-side of an assignment expression, and an r-value usually only appears on the right-hand-side of an assignment expression. 
+
+However, there are so many exceptions to this simple rule now that these are no longer used as the definition - and indeed the terms are further categorised into *pr-value*, *gl-value*, and *xvalue* - but I still find the left-hand-side and right-hand-side rule of thumb as a useful starting point to remember which one is which.
 
 Don't worry too much about fully understanding l-values and r-values just yet, there's plenty of professional C++ engineers who don't understand them, and it is very rare indeed to find one that understands them completely.
 
@@ -43,7 +45,7 @@ The type is the "kind" of "thing" that a "thing" is. This will probably make mor
 
 There's many many many types available, and much of the work of a C++ engineer is making new types that suit your usage needs, by combining other types together and sometimes adding behaviours to them.
 
-## example 1
+## Example 1
 
 ```cpp
 #include <iostream>
@@ -56,24 +58,96 @@ int main()
 }
 ```
 
-In example 1 above, we have two named objects: `three` and `std::cout`, as well as one literal, `\n`. Just by the way, the named objects are l-values and the literal is an r-value.
+In example 1 above, we have two named objects: `three` and `std::cout`, as well as one unnamed object, the literal `\n`. Just by the way, the named objects are l-values and the literal is an r-value.
 
-## example 2
+## Variables
+
+The object named `three` is also called a *variable*. A variable is an object whose value can be changed. In this example, we do not change it, we only *initialise* it, which means it begins life with the intended value already stored in it.
+
+Variables usually have a memory location associated with them - this is basically a box to store the object in, and the variable name is the label on the box.
+
+## Assignment expressions
+
+If a variable is a box to put things in, an assignment expression is how you put something in the box, and usually takes the form of *l-value expression* `=` *r-value expression*.
+
+## Initialisation
+
+In example 1, the assignment expression is `three = 3`, and forms the *direct initialisation* of the variable called `three`. This just means that the box named `three` is created with nothing inside it and then `3` is put in immediately - there's no way to access the empty box.
+
+Variables can also be initialised later - the initialisation is simply the first assignment expression that assigns a value to a variable.
+
+## Example 2
 
 ```cpp
 #include <iostream>
 
 int main()
 {
-    int threepointfive = 3.5;
+    int notThreeYet;
 
-    std::cout << threepointfive << '\n';
+    notThreeYet = 3;
+
+    std::cout << notThreeYet << '\n';
 }
 ```
 
-In example two, we use an *assignment expression* try to set the value of `threepointfive`, which is an `int`, to the value of `3.5` which is a `double` literal.
+In example 2, we create a variable called `notThreeYet`, but we don't initialise it.
 
-When you build this example, do you see any errors or warnings?
+On the following line, we set the value of `notThreeYet` to `3` using an assignment expression.
 
-What happens when you run it?
+### Example 2 Questions
 
+1. what would happen if we removed the assignment expression?
+
+Note that uninitialised variables tend to only be an issue with the built-in types, which is a result of
+
+* the C++ committee's choice to continue being compatible with C - (almost) any valid C program is also a valid C++ program
+* C and C++'s backward compatibility - (almost) any existing valid C or C++ code should continue to compile and behave as expected with any future version.
+* C's history - earlier versions of C didn't allow declarations part way through functions, so they needed a way to declare variables at the top of the function without giving it a value yet, because that would just waste time when it gets overwritten later.
+
+Later, we will have techniques that allow us to avoid these issues without even incurring unnecessary performance hits.
+
+## Example 3
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int threePointFive = 3.5;
+
+    std::cout << threePointFive << '\n';
+}
+```
+
+In example two, we use an *assignment expression* try to set the value of `threePointFive`, which is an `int`, to the value of `3.5` which is a `double` literal.
+
+### Example 3 Questions
+
+1. When you build this example, do you see any errors or warnings?
+
+1. What happens when you run it?
+
+1. Can you fix it so that the value printed to the screen is `3.5`?
+
+## Example 4
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int threeThenFour = 3;
+
+    threeThenFour = 4;
+
+    std::cout << threeThenFour << '\n';
+}
+```
+
+This program uses an assignment expression outside of the *initialisation* of the variable
+
+
+### Example 4 Questions
+
+1. What do you think will be printed out by this program?
