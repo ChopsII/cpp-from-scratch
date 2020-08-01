@@ -15,7 +15,7 @@ int main()
 }
 ```
 
-Try it for yourself! Go to <http://cpp.sh> (or any online C++ IDE of choice) and carefully type in the source code of the program above, and click run.
+Try it for yourself! Go to <https://repl.it/languages/cpp> (or any online C++ IDE of choice) and carefully type in the source code of the program above, and click run.
 
 Feel free to play around with it a little.
 
@@ -42,9 +42,9 @@ The real understanding will come with practice - I often liken learning to progr
 #include <iostream>
 ```
 
-#### Preprocessor Directive
+#### [Preprocessor Directive](../terms/preprocessor_directive.md)
 
-The first character on the line, `#`, indicates that this line is what is called a *Preprocessor Directive* - it "directs" the *preprocessor* to do something in particular. The preprocessor is a tool that runs as the first step of *building* a C++ *program*. It is very simple, and has a few directives that are useful to know.
+The first character on the line, `#`, indicates that this line is what is called a *Preprocessor Directive* - it "directs" the [preprocessor](../terms/preprocessor.md) to do something in particular. The preprocessor is a tool that runs as the first step of *building* a C++ *program*. It is very simple, and has a few directives that are useful to know.
 
 #### Include directive
 

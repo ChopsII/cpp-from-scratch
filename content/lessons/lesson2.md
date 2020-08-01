@@ -98,6 +98,7 @@ On the following line, we set the value of `notThreeYet` to `3` using an assignm
 ### Example 2 Questions
 
 1. what would happen if we removed the assignment expression?
+1. do you see any errors or warnings as a result of removing the assignment expression?
 
 Note that uninitialised variables tend to only be an issue with the built-in types, which is a result of
 
@@ -151,3 +152,24 @@ This program uses an assignment expression outside of the *initialisation* of th
 ### Example 4 Questions
 
 1. What do you think will be printed out by this program?
+1. What happens if you put `int` at the beginning of line 7, so that it is `    int threeThenFour = 4;`
+
+
+## Example 5
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    const int threeThenFour = 3;
+
+    threeThenFour = 4;
+
+    std::cout << threeThenFour << '\n';
+}
+```
+
+TODO: add string literals
+TODO: add exercises for printing out string lityerals
+TODO: explain "printing"

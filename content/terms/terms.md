@@ -1,4 +1,4 @@
-# Glossary
+# Terms
 
 Preprocessor Directive
 
