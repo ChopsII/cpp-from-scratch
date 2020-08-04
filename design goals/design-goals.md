@@ -4,6 +4,10 @@
 
 - Targetting anyone who can use a computer, read english, has internet.
 
+- should be able to be followed easily by someone who has programmed before in another language
+
+- someone who has never programmed before should be able to follow while clicking one or two levels deep into definitions and "see also" links.
+
 - No need to understand any jargon before starting course.
 
 ## End result for audience
