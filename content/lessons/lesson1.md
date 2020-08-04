@@ -50,15 +50,15 @@ The first character on the line, `#`, indicates that this line is what is called
 
 #### Include directive
 
-This particular preprocessor directive is a [#include directive](../terms/#include directive.md) - sometimes called a hash-include - which tells the preprocessor to go away and find a file called `iostream`, preprocess it, and paste the result into this source in place of this line. That is, the [compiler](../terms/compiler.md) itself never actually sees this preprocessor directive, instead it sees the source of the file called iostream after it has been preprocessed.
+This particular preprocessor directive is a [#include directive](../terms/include_directive.md) - sometimes called a hash-include - which tells the preprocessor to go away and find a file called `iostream`, preprocess it, and paste the result into this source in place of this line. That is, the [compiler](../terms/compiler.md) itself never actually sees this preprocessor directive, instead it sees the source of the file called iostream after it has been preprocessed.
 
 #### Angle brackets versus quotes in Include Directive
 
-An alternative way to write the include directive is `#include "iostream"`. The difference is the quotes around the file to include, as opposed to the angle brackets in the original. The two forms are very similar, but they do have a slight difference in meaning; the form with quotes is allowed to first search for the file being included in the same location as the file that the directive appears in, before searching the [include paths](../terms/include paths.md). The angle brackets form is only allowed to search for the file in the include paths.
+An alternative way to write the include directive is `#include "iostream"`. The difference is the quotes around the file to include, as opposed to the angle brackets in the original. The two forms are very similar, but they do have a slight difference in meaning; the form with quotes is allowed to first search for the file being included in the same location as the file that the directive appears in, before searching the [include paths](../terms/include_paths.md). The angle brackets form is only allowed to search for the file in the include paths.
 
 #### iostream
 
-The iostream file is a [header file](../terms/header file.md) from the [standard library](../terms/standard library.md). We include this file so that we have access to some useful things that are [defined](../terms/defined.md) in it, in this case the `std::out` [object](../terms/object.md), which allows us to write characters to the terminal, as well as the [operator<<](../terms/operator<<.md) functions that we use to specify what things we want to write to that [stream](../terms/stream.md).
+The iostream file is a [header file](../terms/header file.md) from the [standard library](../terms/standard_library.md). We include this file so that we have access to some useful things that are [defined](../terms/defined.md) in it, in this case the `std::out` [object](../terms/object.md), which allows us to write characters to the terminal, as well as the [operator<<](../terms/operator<<.md) functions that we use to specify what things we want to write to that [stream](../terms/stream.md).
 
 ### Line 2
 
