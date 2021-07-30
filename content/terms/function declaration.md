@@ -1,5 +1,11 @@
 # Function Declaration
 
+## Purpose
+
+Tells the compiler that there will be a function with a given name, return value, parameters, and cv and reference modifiers
+
+## Basic form
+
 The basic function declaration takes the form:
 
 ```cpp
