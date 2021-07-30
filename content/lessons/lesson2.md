@@ -21,7 +21,7 @@ If not, we will see it again soon; point it out when you do see it.
 
 Objects with names are usually examples of what are called *l-values*. These include variables and constants, things with a name and a memory location of some sort.
 
-Objectes without names are usually examples of what are called *r-values*. These include results of expressions.
+Objects without names are usually examples of what are called *r-values*. These include results of expressions.
 
 ### l-value and r-values
 
